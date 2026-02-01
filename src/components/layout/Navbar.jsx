@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../ui/Button';
+import logo from '../../assets/aymanBGless.png';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +12,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <a href="/" className="flex items-center">
-              <h1 className="text-3xl font-sans text-brand-white font-bold">Ayman <span className='font-script text-brand-gold'>Clothing</span></h1>
+                <img src={logo} alt="Ayman Clothing Logo" className="h- w-auto object-contain" />
             </a>
           </div>
 

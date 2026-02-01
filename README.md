@@ -1,4 +1,4 @@
-# Ayman Apparels - Premium Fashion Portal 🇳🇬
+# Ayman Clothing - Premium Fashion Portal 🇳🇬
 
 ![Ayman Apparels Logo](./src/assets/ayman.png) 
 
