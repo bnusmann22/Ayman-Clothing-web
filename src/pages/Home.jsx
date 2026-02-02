@@ -43,7 +43,7 @@ const Home = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-brand-dark via-gray-900 to-brand-dark py-20 md:py-32">
+      {/* <section className="relative bg-gradient-to-br from-brand-dark via-gray-900 to-brand-dark py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center">
             <h1 className="text-5xl md:text-7xl font-script text-brand-gold mb-6 animate-fade-in">
@@ -66,12 +66,12 @@ const Home = () => {
           </div>
         </div>
         
-        {/* Decorative element */}
+        {/* Decorative element 
         <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent"></div>
-      </section>
+      </section> */}
 
       {/* Featured Products Section */}
-      <section className="py-16 bg-gradient-to-b from-brand-dark to-gray-900">
+      {/* <section className="py-16 bg-gradient-to-b from-brand-dark to-gray-900">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-script text-brand-gold mb-4">
@@ -90,10 +90,10 @@ const Home = () => {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Why Choose Us Section */}
-      <section className="py-16 bg-brand-dark border-y-2 border-brand-gold">
+      {/* <section className="py-16 bg-brand-dark border-y-2 border-brand-gold">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-script text-brand-gold mb-4">
@@ -146,10 +146,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-gray-900 to-brand-dark">
+      {/* <section className="py-16 bg-gradient-to-br from-gray-900 to-brand-dark">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-4xl font-script text-brand-gold mb-4">
             Ready for Your Custom Design?
@@ -161,7 +161,7 @@ const Home = () => {
             Book a Consultation
           </Button>
         </div>
-      </section>
+      </section> */}
     </Layout>
   );
 };
