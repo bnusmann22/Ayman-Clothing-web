@@ -69,7 +69,7 @@ const Footer = () => {
         <div className="flex justify-center mb-8" >
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.9987168776684!2d8.532456273714445!3d11.974590235954825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11ae813c03494f3d%3A0xcfe0a7fb1cedd48d!2sMariya%20Plaza!5e0!3m2!1sen!2sng!4v1770167136917!5m2!1sen!2sng" 
-            width="80%"
+            width="90%"
             height="300"
             className="border-[0.5px] border-brand-gold rounded"
             allowFullScreen=""
