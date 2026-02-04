@@ -50,7 +50,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-slate-100 via-gray-50 to-blue-100 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -61,13 +61,13 @@ const Hero = () => {
         <motion.div
           variants={rotateVariants}
           animate="animate"
-          className="absolute top-1/2 -right-32 w-80 h-80 bg-purple-200 rounded-full opacity-20 blur-3xl"
+          className="absolute top-1/2 -right-32 w-80 h-80 bg-blue-300 rounded-full opacity-20 blur-3xl"
           style={{ animationDirection: 'reverse' }}
         />
         <motion.div
           variants={rotateVariants}
           animate="animate"
-          className="absolute -bottom-20 left-1/3 w-96 h-96 bg-pink-200 rounded-full opacity-20 blur-3xl"
+          className="absolute -bottom-20 left-1/3 w-96 h-96 bg-yellow-100 rounded-full opacity-20 blur-3xl"
         />
       </div>
 
@@ -84,9 +84,7 @@ const Hero = () => {
             {/* Badge */}
             <motion.div variants={itemVariants} className="inline-flex items-center gap-2 mb-6">
               <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg flex items-center gap-2"
+                className="bg-gradient-to-r from-blue-900 to-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg flex items-center gap-2"
               >
                 <Sparkles className="w-4 h-4" />
                 <span>New Collection 2026</span>
@@ -99,11 +97,11 @@ const Hero = () => {
               className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight"
             >
               Elevate Your{' '}
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Style
+              <span className="text-blue-900">
+                Style With
               </span>
               <br />
-              With Ayman
+               <span className="text-brand-gold font-script">Ayman</span> Clothing
             </motion.h1>
 
             {/* Subheading */}
@@ -127,7 +125,7 @@ const Hero = () => {
                 <Button
                   variant="primary"
                   size="lg"
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-2 group"
+                  className="bg-blue-900 hover:bg-blue-950 text-white shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-2 group"
                 >
                   Shop Collection
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -182,8 +180,8 @@ const Hero = () => {
                 animate="animate"
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-96 bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-2xl p-6 backdrop-blur-lg border border-gray-100"
               >
-                <div className="w-full h-full bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center">
-                  <ShoppingBag className="w-32 h-32 text-blue-600 opacity-50" />
+                <div className="w-full h-full bg-gradient-to-br from-blue-100 to-yellow-50 rounded-2xl flex items-center justify-center">
+                  <ShoppingBag className="w-32 h-32 text-blue-900 opacity-50" />
                 </div>
               </motion.div>
 
@@ -217,7 +215,7 @@ const Hero = () => {
                 }}
                 className="absolute bottom-32 left-0 bg-white p-4 rounded-2xl shadow-xl border border-gray-100"
               >
-                <Sparkles className="w-8 h-8 text-purple-600" />
+                <Sparkles className="w-8 h-8 text-yellow-600" />
               </motion.div>
 
               {/* Badge Card */}
@@ -231,7 +229,7 @@ const Hero = () => {
                   ease: "easeInOut",
                   delay: 1,
                 }}
-                className="absolute top-40 left-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full shadow-xl"
+                className="absolute top-40 left-5 bg-gradient-to-r from-blue-900 to-blue-700 text-white px-6 py-3 rounded-full shadow-xl"
               >
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
@@ -248,7 +246,7 @@ const Hero = () => {
               <motion.div
                 animate={{ rotate: -360 }}
                 transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-                className="absolute bottom-20 right-1/4 w-16 h-16 border-4 border-dashed border-purple-300 rounded-full opacity-30"
+                className="absolute bottom-20 right-1/4 w-16 h-16 border-4 border-dashed border-yellow-400 rounded-full opacity-30"
               />
             </div>
           </motion.div>
