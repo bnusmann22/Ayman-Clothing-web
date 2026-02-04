@@ -72,13 +72,7 @@ const Footer = () => {
             <h4 className="text-lg font-sans font-semibold text-brand-white mb-4">Support</h4>
             <ul className="space-y-2 text-sm mb-6">
               <li>
-                <a href="#" className="hover:text-brand-gold transition-colors duration-200">Size Guide</a>
-              </li>
-              <li>
                 <a href="#" className="hover:text-brand-gold transition-colors duration-200">Shipping Policy</a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-brand-gold transition-colors duration-200">Returns & Exchanges</a>
               </li>
               <li>
                 <a href="#" className="hover:text-brand-gold transition-colors duration-200">Contact Us</a>
@@ -101,45 +95,6 @@ const Footer = () => {
               <p className="text-xs opacity-75">Mon-Sat: 9AM - 6PM</p>
             </div>
           </div>
-
-          {/* Column 4: Stay Connected */}
-          <div>
-            <h4 className="text-lg font-sans font-semibold text-brand-white mb-4">Stay Connected</h4>
-            <p className="text-sm mb-4">
-              Join our inner circle for exclusive offers and 10% off your first order.
-            </p>
-            
-            {/* Newsletter Form */}
-            <form onSubmit={handleSubscribe} className="mb-6">
-              <div className="flex flex-col gap-2">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Your email address"
-                  className="px-4 py-2 rounded-lg bg-brand-white text-brand-dark font-sans text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold"
-                  required
-                />
-                <button
-                  type="submit"
-                  className="px-4 py-2 bg-brand-gold text-brand-dark font-sans font-semibold rounded-lg hover:bg-opacity-90 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:ring-offset-2 focus:ring-offset-brand-dark"
-                >
-                  Subscribe
-                </button>
-              </div>
-              {subscribed && (
-                <p className="text-green-400 text-xs mt-2">Thank you for subscribing!</p>
-              )}
-            </form>
-
-            {/* CTA Button */}
-            <a
-              href="#"
-              className="block w-full px-4 py-2 text-center bg-transparent border-2 border-brand-gold text-brand-gold font-sans font-semibold rounded-lg hover:bg-brand-gold hover:text-brand-dark transition-all duration-200"
-            >
-              Book a Consultation
-            </a>
-          </div>
         </div>
 
         {/* Bottom Bar */}
@@ -155,32 +110,6 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Payment Methods */}
-            <div className="flex items-center gap-4">
-              <p className="text-xs font-sans">We accept:</p>
-              <div className="flex gap-3 items-center">
-                {/* Paystack */}
-                <div className="bg-brand-white rounded px-2 py-1">
-                  <span className="text-xs font-bold text-brand-dark">Paystack</span>
-                </div>
-                {/* Flutterwave */}
-                <div className="bg-brand-white rounded px-2 py-1">
-                  <span className="text-xs font-bold text-brand-dark">Flutterwave</span>
-                </div>
-                {/* Visa */}
-                <svg className="h-6" viewBox="0 0 48 32" fill="none">
-                  <rect width="48" height="32" rx="4" fill="white"/>
-                  <path d="M20.8 22.4l1.6-9.6h2.4l-1.6 9.6h-2.4zm11.2-9.4c-.5-.2-1.2-.4-2.1-.4-2.3 0-3.9 1.2-3.9 3 0 1.3 1.2 2 2.1 2.5.9.5 1.2.8 1.2 1.2 0 .6-.8.9-1.5.9-1 0-1.5-.1-2.3-.5l-.3-.2-.3 2c.6.2 1.6.4 2.7.4 2.5 0 4.1-1.2 4.1-3.1 0-1-.6-1.8-2-2.4-.8-.4-1.3-.7-1.3-1.2 0-.4.5-.8 1.5-.8.9 0 1.5.2 2 .4l.2.1.3-1.9z" fill="#1434CB"/>
-                </svg>
-                {/* Mastercard */}
-                <svg className="h-6" viewBox="0 0 48 32" fill="none">
-                  <rect width="48" height="32" rx="4" fill="white"/>
-                  <circle cx="18" cy="16" r="8" fill="#EB001B"/>
-                  <circle cx="30" cy="16" r="8" fill="#F79E1B"/>
-                  <path d="M24 20.8c1.2-1 2-2.6 2-4.4s-.8-3.4-2-4.4c-1.2 1-2 2.6-2 4.4s.8 3.4 2 4.4z" fill="#FF5F00"/>
-                </svg>
-              </div>
-            </div>
           </div>
 
           {/* Made in Nigeria Badge */}

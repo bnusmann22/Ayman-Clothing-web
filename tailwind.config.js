@@ -18,8 +18,10 @@ module.exports = {
       fontFamily: {
         // 'Dancing Script' matches the elegant, flowing feel of 'Ayman'
         script: ['"Dancing Script"', 'cursive'],
-        // 'Montserrat' or 'Inter' matches the clean sans-serif used for the number
-        sans: ['Montserrat', 'sans-serif'],
+        // Geist as the main sans-serif font
+        sans: ['"Geist Sans"', 'sans-serif'],
+        // Geist Mono for monospace
+        mono: ['"Geist Mono"', 'monospace'],
       },
     },
   },

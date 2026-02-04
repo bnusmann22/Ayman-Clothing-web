@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import Button from '../ui/Button';
 import logo from '../../assets/aymanBGless.png';
 
@@ -11,28 +12,28 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="/" className="flex items-center">
+            <Link to="/" className="flex items-center">
                 <img src={logo} alt="Ayman Clothing Logo" className="h-56 w-auto " />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="/" className="text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium">
+            <NavLink to="/" className={({isActive}) => isActive ? "text-brand-gold font-sans font-medium" : "text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium"}>
               Home
-            </a>
-            <a href="/shop" className="text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium">
+            </NavLink>
+            <NavLink to="/shop" className={({isActive}) => isActive ? "text-brand-gold font-sans font-medium" : "text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium"}>
               Shop
-            </a>
-            <a href="/custom" className="text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium">
+            </NavLink>
+            <NavLink to="/custom" className={({isActive}) => isActive ? "text-brand-gold font-sans font-medium" : "text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium"}>
               Custom Orders
-            </a>
-            <a href="/about" className="text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium">
+            </NavLink>
+            <NavLink to="/about" className={({isActive}) => isActive ? "text-brand-gold font-sans font-medium" : "text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium"}>
               About
-            </a>
-            <a href="/contact" className="text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium">
+            </NavLink>
+            <NavLink to="/contact" className={({isActive}) => isActive ? "text-brand-gold font-sans font-medium" : "text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium"}>
               Contact
-            </a>
+            </NavLink>
           </div>
 
           {/* CTA & Cart */}
@@ -73,21 +74,21 @@ const Navbar = () => {
         {isMenuOpen && (
           <div className="md:hidden border-t border-brand-gold py-4">
             <div className="flex flex-col space-y-4">
-              <a href="/" className="text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium py-2">
+              <NavLink to="/" className={({isActive}) => isActive ? "text-brand-gold font-sans font-medium py-2" : "text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium py-2"} onClick={() => setIsMenuOpen(false)}>
                 Home
-              </a>
-              <a href="/shop" className="text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium py-2">
+              </NavLink>
+              <NavLink to="/shop" className={({isActive}) => isActive ? "text-brand-gold font-sans font-medium py-2" : "text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium py-2"} onClick={() => setIsMenuOpen(false)}>
                 Shop
-              </a>
-              <a href="/custom" className="text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium py-2">
+              </NavLink>
+              <NavLink to="/custom" className={({isActive}) => isActive ? "text-brand-gold font-sans font-medium py-2" : "text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium py-2"} onClick={() => setIsMenuOpen(false)}>
                 Custom Orders
-              </a>
-              <a href="/about" className="text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium py-2">
+              </NavLink>
+              <NavLink to="/about" className={({isActive}) => isActive ? "text-brand-gold font-sans font-medium py-2" : "text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium py-2"} onClick={() => setIsMenuOpen(false)}>
                 About
-              </a>
-              <a href="/contact" className="text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium py-2">
+              </NavLink>
+              <NavLink to="/contact" className={({isActive}) => isActive ? "text-brand-gold font-sans font-medium py-2" : "text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium py-2"} onClick={() => setIsMenuOpen(false)}>
                 Contact
-              </a>
+              </NavLink>
               <div className="pt-4 flex items-center gap-4">
                 <button className="text-brand-white hover:text-brand-gold transition-colors duration-200 relative">
                   <svg className="w-6 h-6" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
