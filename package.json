@@ -13,6 +13,7 @@
     "@fontsource/geist-mono": "^5.2.7",
     "@fontsource/geist-sans": "^5.2.5",
     "@lottiefiles/dotlottie-react": "^0.17.13",
+    "framer-motion": "^12.31.0",
     "lucide-react": "^0.563.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
