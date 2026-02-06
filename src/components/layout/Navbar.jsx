@@ -25,9 +25,6 @@ const Navbar = () => {
             <NavLink to="/shop" className={({isActive}) => isActive ? "text-brand-gold font-sans font-medium" : "text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium"}>
               Shop
             </NavLink>
-            <NavLink to="/custom" className={({isActive}) => isActive ? "text-brand-gold font-sans font-medium" : "text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium"}>
-              Custom Orders
-            </NavLink>
             <NavLink to="/about" className={({isActive}) => isActive ? "text-brand-gold font-sans font-medium" : "text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium"}>
               About
             </NavLink>
@@ -46,9 +43,11 @@ const Navbar = () => {
                 0
               </span>
             </button>
-            <Button size="sm" variant="primary">
-              Book Now
-            </Button>
+            <Link to="/contact">
+              <Button size="sm" variant="primary">
+                Book Now
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -80,9 +79,6 @@ const Navbar = () => {
               <NavLink to="/shop" className={({isActive}) => isActive ? "text-brand-gold font-sans font-medium py-2" : "text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium py-2"} onClick={() => setIsMenuOpen(false)}>
                 Shop
               </NavLink>
-              <NavLink to="/custom" className={({isActive}) => isActive ? "text-brand-gold font-sans font-medium py-2" : "text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium py-2"} onClick={() => setIsMenuOpen(false)}>
-                Custom Orders
-              </NavLink>
               <NavLink to="/about" className={({isActive}) => isActive ? "text-brand-gold font-sans font-medium py-2" : "text-brand-white hover:text-brand-gold transition-colors duration-200 font-sans font-medium py-2"} onClick={() => setIsMenuOpen(false)}>
                 About
               </NavLink>
@@ -98,9 +94,11 @@ const Navbar = () => {
                     0
                   </span>
                 </button>
-                <Button size="sm" variant="primary" fullWidth>
-                  Book Now
-                </Button>
+                <Link to="/contact" className="w-full" onClick={() => setIsMenuOpen(false)}>
+                  <Button size="sm" variant="primary" fullWidth>
+                    Book Now
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

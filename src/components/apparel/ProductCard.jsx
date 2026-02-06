@@ -6,7 +6,6 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className="group bg-brand-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
-      {/* Image Container */}
       <div className="relative overflow-hidden bg-gray-100 aspect-[3/4]">
         {image ? (
           <img
@@ -35,8 +34,6 @@ const ProductCard = ({ product }) => {
             </span>
           )}
         </div>
-
-        {/* Quick Actions */}
         <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <button className="bg-brand-white text-brand-gold p-2 rounded-full hover:bg-brand-gold hover:text-brand-white transition-colors duration-200 shadow-lg">
             <svg className="w-5 h-5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">

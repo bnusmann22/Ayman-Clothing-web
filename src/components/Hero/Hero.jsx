@@ -1,9 +1,29 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, ShoppingBag, TrendingUp } from 'lucide-react';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { ArrowRight, Sparkles, TrendingUp } from 'lucide-react';
 import Button from '../ui/Button';
+import heroImageOne from '../../assets/IMG1.jpg';
+import heroImageTwo from '../../assets/IMG2.jpg';
+import heroImageThree from '../../assets/IMG3.jpg';
+import heroImageFour from '../../assets/IMG4.jpg';
 
 const Hero = () => {
+  const [activeImage, setActiveImage] = useState(0);
+  const heroImages = [
+    { src: heroImageOne, alt: 'Featured outfit 1' },
+    { src: heroImageTwo, alt: 'Featured outfit 2' },
+    { src: heroImageThree, alt: 'Featured outfit 3' },
+    { src: heroImageFour, alt: 'Featured outfit 4' },
+  ];
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setActiveImage((prev) => (prev + 1) % heroImages.length);
+    }, 30000);
+
+    return () => clearInterval(intervalId);
+  }, [heroImages.length]);
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -31,7 +51,7 @@ const Hero = () => {
     animate: {
       y: [0, -20, 0],
       transition: {
-        duration: 3,
+        duration: 6,
         repeat: Infinity,
         ease: "easeInOut",
       },
@@ -170,7 +190,7 @@ const Hero = () => {
             initial={{ opacity: 0, x: 100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="relative hidden lg:block"
+            className="relative hidden lg:block -mt-16 lg:-mt-24"
           >
             {/* Floating Cards */}
             <div className="relative h-[600px]">
@@ -178,10 +198,21 @@ const Hero = () => {
               <motion.div
                 variants={floatingVariants}
                 animate="animate"
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-96 bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-2xl p-6 backdrop-blur-lg border border-gray-100"
+                className="absolute right-4 left-3 -translate-x-1/2 -translate-y-1/2 w-96 h-[452px] bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-2xl p-6 backdrop-blur-lg border border-gray-100"
               >
-                <div className="w-full h-full bg-gradient-to-br from-blue-100 to-yellow-50 rounded-2xl flex items-center justify-center">
-                  <ShoppingBag className="w-32 h-32 text-blue-900 opacity-50" />
+                <div className="w-full h-full bg-gradient-to-br from-blue-100 to-yellow-50 rounded-2xl flex items-center justify-center overflow-hidden">
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={heroImages[activeImage].src}
+                      src={heroImages[activeImage].src}
+                      alt={heroImages[activeImage].alt}
+                      className="h-full w-full object-cover"
+                      initial={{ opacity: 0, scale: 0.98 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 1.02 }}
+                      transition={{ duration: 1.95, ease: "easeInOut" }}
+                    />
+                  </AnimatePresence>
                 </div>
               </motion.div>
 
@@ -218,7 +249,6 @@ const Hero = () => {
                 <Sparkles className="w-8 h-8 text-yellow-600" />
               </motion.div>
 
-              {/* Badge Card */}
               <motion.div
                 animate={{
                   y: [0, -20, 0],
@@ -237,7 +267,6 @@ const Hero = () => {
                 </div>
               </motion.div>
 
-              {/* Decorative Elements */}
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
